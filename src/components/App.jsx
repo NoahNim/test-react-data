@@ -1,10 +1,16 @@
 import React from 'react';
 import Content from './Content.jsx';
+import Home from './Home.jsx';
+// import HashRouter from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
   return (
     <div>
-      <Content />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/list' component={Content} />
+      </Switch>
     </div>
   );
 }
